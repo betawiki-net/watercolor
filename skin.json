@@ -1,0 +1,34 @@
+{
+	"name": "Watercolor",
+	"author": "David Hrdlička",
+	"descriptionmsg": "watercolor-desc",
+	"namemsg": "skinname-watercolor",
+	"type": "skin",
+	"requires" : {
+		"MediaWiki": ">= 1.29.0"
+	},
+	"ValidSkinNames": {
+		"watercolor": "Watercolor"
+	},
+	"AutoloadClasses": {
+		"SkinWatercolor": "SkinWatercolor.php",
+		"WatercolorTemplate": "WatercolorTemplate.php"
+	},
+	"MessagesDirs": {
+		"Watercolor": "i18n"
+	},
+	"ResourceModules": {
+		"skins.watercolor": {
+			"targets": [ "desktop", "mobile" ],
+			"position": "top",
+			"styles": {
+				"watercolor.less": { }
+			}
+
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Watercolor"
+	}
+}

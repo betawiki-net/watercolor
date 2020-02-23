@@ -1,0 +1,294 @@
+@import 'mediawiki.mixins';
+
+@media screen {	
+	body {
+		//font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+		background: #5296ff;
+
+		#mw-page-base {
+			background: none;
+
+			
+			background-size: auto 5em;	
+			background-repeat: repeat-y, repeat-x;
+
+			@media (min-width: 1248px) {
+				background-image: url("images/boxes.svg"), linear-gradient(to right, #5296ff ~"calc(100vw - 768px)", #3171d6 ~"calc(100vw - 768px + 101px)");		
+				background-position: ~"calc(100vw - 768px)" top, bottom left;
+			}
+	
+			@media (max-width: 1248px) {
+				background-image: url("images/boxes.svg"), linear-gradient(to right, #5296ff 480px, #3171d6 ~"calc(480px + 101px)");			
+				background-position: 480px top, bottom left;
+			}	
+		}
+
+		#mw-navigation {
+			#left-navigation, #right-navigation {
+				div.vectorTabs span {
+					&, &:hover, &:focus {
+						background-position: 0.25em 0.25em;
+						background-size: 1em;
+					}
+				}
+			}
+
+			#left-navigation {
+				padding-left: 1.5em;
+			}
+
+			#searchform {
+				margin-top: 0.375em;
+
+				#simpleSearch {
+					#searchInput {
+						background-color: white;
+						border-color: #3171d6;
+						border-radius: 0;
+
+						.box-shadow(none);
+
+						&:focus {
+							.box-shadow(inset 0 0 0 1px #5296ff);
+						}
+
+						&:hover {
+							border-color: #5296ff;
+						}
+					}
+				}
+			}
+			
+			div.vectorTabs {
+				background: none;
+				margin-top: 0.5em;
+				margin-bottom: 0.5em;
+				height: 1.5em;
+			
+				ul {
+					background: none;
+			
+					li {
+						& + li {
+							margin-left: 0.75em;
+						}
+			
+						background: none;
+						
+						.background-image-svg-quick("images/button");
+						background-position: center left;
+						background-size: 1.5em 1.5em;
+						background-repeat: no-repeat;
+			
+						&.selected,
+						&#ca-unwatch.icon {
+							.background-image-svg-quick("images/button-active");
+						}
+
+						&.new {
+							a,
+							a:visited {
+								color: #ffa5a4;
+							}
+						}
+				
+						&.selected {
+							a,
+							a:visited {
+								color: white;
+								font-weight: bold;
+							}
+						}
+				
+						a,
+						a:visited
+						{
+							color: #bfd9ff;
+						}
+
+						span {
+							background: none;
+							background-repeat: no-repeat;
+					
+							a {
+								height: 1.5rem;
+								line-height: 1.5rem;
+					
+								padding: 0;
+								padding-left: 1.75rem;
+							}
+						}
+
+						&#ca-watch.icon a, &#ca-unwatch.icon a {
+							&, &.loading {
+								background: none;
+								-webkit-animation: none;
+								-moz-animation: none;
+								animation: none;
+								transform-origin: none;
+							}
+						}
+					}
+				}
+
+				#ca-watch.icon a,
+				#ca-unwatch.icon a,
+				#ca-addsection a {
+					height: 0;
+
+					padding-left: 0;
+					padding-top: 1.5em;
+
+					overflow: hidden;
+
+					width: 2em;
+				}
+			}
+
+			div.vectorMenu {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+				margin-left: 0.75em;
+
+				&.menuForceShow h3 {
+					.background-image-svg-quick("images/button-active");
+				}
+
+				.background-image-svg-quick("images/button");
+				background-position: center left;
+				background-size: 1.5em 1.5em;
+				background-repeat: no-repeat;
+			
+				h3 {
+					padding: 0;
+
+					background: none;
+
+					height: 1.5em;
+					width: 1.5em;
+
+					background-position: .375rem .375rem;
+					background-size: 0.75em;
+					background-repeat: no-repeat;
+			
+					span {
+						background: none;
+						height: 0;
+						overflow: hidden;
+			
+						&:after {
+							top: 0;
+							background: none;
+						}
+					}
+				}
+			
+				.menu {
+					a {
+						color: #2c60b2;
+			
+						&:visited {
+							color: #3573d6;
+						}
+					}
+				}
+			}
+
+			#mw-panel {
+				div.portal {
+					h3 {
+						font-weight: bold;
+						color: white;
+						border-bottom: 1px solid white;
+					}
+			
+					div.body {
+						background: none;
+					}
+				}
+			}
+		}
+
+		div#mw-navigation {
+			a {
+				&, &.new {
+					&, &:visited {
+						color: #bfd9ff;
+					}
+				}
+			}
+
+			#pt-userpage, #pt-anonuserpage {
+				color: white;
+				
+				a, a.new {
+					color: inherit;
+				}
+			}
+
+			#pt-userpage a  {
+				.background-image-svg-quick("images/wikimediaui/userAvatar-invert");
+			}
+
+			#pt-anonuserpage {
+				.background-image-svg-quick("images/wikimediaui/userAnonymous-invert");
+			}
+		}
+
+		div#footer,
+		div#mw-panel div.portal div.body li {
+			a {
+				&, &.new {
+					&, &:visited {
+						color: white;
+					}
+				}
+			}
+		}
+
+		#content {
+			border-top-left-radius: 2em;
+			border-bottom-left-radius: 2em;
+			box-shadow: -5px 5px 10px -7px black;
+			border: none;
+
+			margin-top: 0;
+		}
+		
+		#footer {
+			ul li {
+				color: white;
+			}
+		}
+
+		.suggestions {
+			border: 1px solid #3171d6;
+			border-top: none;
+			box-sizing: border-box;
+			background: white;
+
+			.suggestions-results {
+				border: none;
+				//border-bottom: 1px solid #3171d6;
+			}
+
+			.suggestions-result, .suggestions-special {
+				color: black;
+				margin: 2px;
+				border: 1px solid transparent;
+
+				&.suggestions-result-current {
+					&,
+					& .special-label,
+					& .special-query {
+						color: black;
+					}
+					background-color: rgb(206, 211, 231);
+					border-color: rgb(49, 105, 198);
+				}
+			}
+		}
+	}
+}
+
+@import 'icons.less';
