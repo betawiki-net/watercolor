@@ -4,6 +4,7 @@
 	"descriptionmsg": "watercolor-desc",
 	"namemsg": "skinname-watercolor",
 	"type": "skin",
+	"license-name": "MIT",
 	"requires" : {
 		"MediaWiki": ">= 1.29.0"
 	},
