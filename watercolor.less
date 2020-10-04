@@ -25,11 +25,16 @@
 
 		#mw-navigation {
 			#left-navigation, #right-navigation {
-				div.vectorTabs span {
-					&, &:hover, &:focus {
-						background-position: 0.25em 0.25em;
+				.vector-menu-tabs li::before {
+						content: "";
+
+						background-repeat: no-repeat;
+						background-position: .25em .25em;
 						background-size: 1em;
-					}
+
+						width: 1.5rem;
+						height: 1.5rem;
+						display: inline-block;
 				}
 			}
 
@@ -59,7 +64,7 @@
 				}
 			}
 			
-			div.vectorTabs {
+			.vector-menu-tabs {
 				background: none;
 				margin-top: 0.5em;
 				margin-bottom: 0.5em;
@@ -79,6 +84,8 @@
 						background-position: center left;
 						background-size: 1.5em 1.5em;
 						background-repeat: no-repeat;
+
+						height: 1.5em;
 			
 						&.selected,
 						&#ca-unwatch.icon {
@@ -106,17 +113,19 @@
 							color: #bfd9ff;
 						}
 
-						span {
+						a {
 							background: none;
 							background-repeat: no-repeat;
 					
-							a {
-								height: 1.5rem;
-								line-height: 1.5rem;
+							float: none;
+							display: inline-block;
+							overflow: hidden;
+
+							height: initial;
+							line-height: 1.5rem;
 					
-								padding: 0;
-								padding-left: 1.75rem;
-							}
+							padding: 0;
+							padding-left: .25rem;
 						}
 
 						&#ca-watch.icon a, &#ca-unwatch.icon a {
@@ -145,10 +154,11 @@
 				}
 			}
 
-			div.vectorMenu {
+			.vector-menu-dropdown {
 				padding-top: 0.5em;
-				padding-bottom: 0.5em;
+				padding-bottom: 0.75em;
 				margin-left: 0.75em;
+				width: 1.5em;
 
 				&.menuForceShow h3 {
 					.background-image-svg-quick("images/button-active");
@@ -167,19 +177,20 @@
 					height: 1.5em;
 					width: 1.5em;
 
-					background-position: .375rem .375rem;
-					background-size: 0.75em;
+					background-position: .425rem .425rem;
+					background-size: .75em;
 					background-repeat: no-repeat;
 			
 					span {
+						display: none;
 						background: none;
 						height: 0;
 						overflow: hidden;
-			
-						&:after {
-							top: 0;
-							background: none;
-						}
+					}
+
+					&:after {
+						top: 0;
+						background: none;
 					}
 				}
 			
@@ -195,14 +206,14 @@
 			}
 
 			#mw-panel {
-				div.portal {
+				.vector-menu-portal {
 					h3 {
 						font-weight: bold;
 						color: white;
 						border-bottom: 1px solid white;
 					}
 			
-					div.body {
+					.vector-menu-content {
 						background: none;
 					}
 				}
@@ -235,8 +246,8 @@
 			}
 		}
 
-		div#footer,
-		div#mw-panel div.portal div.body li {
+		#footer,
+		#mw-panel .vector-menu-portal .vector-menu-content li {
 			a {
 				&, &.new {
 					&, &:visited {
