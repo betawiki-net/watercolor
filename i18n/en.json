@@ -3,5 +3,5 @@
     "watercolor-desc": "Whistler \"Watercolor\" skin for MediaWiki",
     "watercolor.css": "/* CSS placed here will affect users of the Watercolor skin */",
     "watercolor.js": "/* Any JavaScript here will be loaded for users using the Watercolor skin */",
-    "watercolor-action-addsection": "Add section"
+    "watercolor-action-addsection": "Add topic"
 }
