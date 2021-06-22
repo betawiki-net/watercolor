@@ -5,8 +5,12 @@ class SkinWatercolor extends SkinVector {
 	var $stylename = 'Watercolor';
 	var $template = 'WatercolorTemplate';
 
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
-		$out->addModuleStyles( 'skins.watercolor' );
+	public function getDefaultModules() {
+		$modules = parent::getDefaultModules();
+		if ( !isset( $modules['styles']['skin'] ) ) {
+			$modules['styles']['skin'] = [];
+		}
+		array_unshift( $modules['styles']['skin'], 'skins.watercolor' );
+		return $modules;
 	}
 }
