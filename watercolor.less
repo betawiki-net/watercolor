@@ -1,5 +1,18 @@
 @import 'mediawiki.mixins';
 
+.background-image-svg( @svg, @fallback ) {
+	background-image: url( @fallback );
+	background-image: linear-gradient( transparent, transparent ), url( @svg );
+}
+
+// Deprecated in MW 1.35, see T248047. To be removed in MW 1.36.
+// Shorthand for background-image-svg. Use if your PNG and SVG have the same name
+// and only if you cannot use ResourceLoaderImage module for some particular reason.
+.background-image-svg-quick( @url ) {
+	.background-image-svg( ~'@{url}.svg', ~'@{url}.png' );
+}
+
+
 @media screen {	
 	body {
 		//font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;

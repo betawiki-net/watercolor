@@ -31,5 +31,6 @@
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
 		"remoteSkinPath": "Watercolor"
-	}
+	},
+	"manifest_version": 1
 }
