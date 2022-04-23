@@ -9,7 +9,19 @@
 		"MediaWiki": ">= 1.29.0"
 	},
 	"ValidSkinNames": {
-		"watercolor": "Watercolor"
+		"watercolor": {
+			"class": "SkinWatercolor",
+			"args": [
+				{
+					"name": "watercolor",
+					"styles": [
+						"skins.vector.styles",
+						"skins.watercolor"
+					],
+					"templateDirectory": "../Vector/includes/templates"
+				}
+			]
+		}
 	},
 	"AutoloadClasses": {
 		"SkinWatercolor": "SkinWatercolor.php",
