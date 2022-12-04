@@ -155,51 +155,55 @@
 			}
 
 			nav.vector-menu-dropdown {
-				padding-top: 0.5em;
-				padding-bottom: 0.75em;
+				margin-top: 0.5em;
 				margin-left: 0.75em;
+				height: 1.5em;
 				width: 1.5em;
-
-				&.menuForceShow h3 {
-					.background-image-svg-quick("images/button-active");
-				}
 
 				.background-image-svg-quick("images/button");
 				background-position: center left;
 				background-size: 1.5em 1.5em;
 				background-repeat: no-repeat;
-			
-				h3 {
+
+				&:has(input:checked) {
+					.background-image-svg-quick("images/button-active");
+				}
+
+				label.vector-menu-heading {
+					display: block;
+					width: 100%;
+					height: 100%;
+
 					padding: 0;
+					padding-bottom: 0.75em;
 
-					background: none;
+					background-image: none;
 
-					height: 1.5em;
-					width: 1.5em;
-
-					background-position: .425rem .425rem;
-					background-size: .75em;
-					background-repeat: no-repeat;
-			
 					span {
 						display: none;
-						background: none;
-						height: 0;
-						overflow: hidden;
+						visibility: collapse;
 					}
 
-					&:after {
-						top: 0;
-						background: none;
+					&::after {
+						display: block;
+						width: 100%;
+						height: 100%;
+
+						background-position: .425rem .425rem;
+						background-size: .75em;
+						background-repeat: no-repeat;
 					}
 				}
 			
-				div.vector-menu-content .vector-menu-content-list {
-					a {
-						color: #2c60b2;
-			
-						&:visited {
-							color: #3573d6;
+				div.vector-menu-content {
+					margin-top: .5em;
+					.vector-menu-content-list {
+						a {
+							color: #2c60b2;
+				
+							&:visited {
+								color: #3573d6;
+							}
 						}
 					}
 				}

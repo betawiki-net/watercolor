@@ -15,9 +15,10 @@
 				{
 					"name": "watercolor",
 					"styles": [
-						"skins.vector.styles",
+						"skins.vector.styles.legacy",
 						"skins.watercolor"
 					],
+					"template": "skin-legacy",
 					"templateDirectory": "../Vector/includes/templates"
 				}
 			]

@@ -1,6 +1,6 @@
 <?php
 
-class SkinWatercolor extends SkinVector {
+class SkinWatercolor extends MediaWiki\Skins\Vector\SkinVectorLegacy {
 	var $skinname = 'watercolor';
 	var $stylename = 'Watercolor';
 	var $template = 'WatercolorTemplate';
