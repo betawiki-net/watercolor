@@ -11,6 +11,9 @@
 	"ValidSkinNames": {
 		"watercolor": {
 			"class": "SkinWatercolor",
+			"services": [
+				"LanguageConverterFactory"
+			],
 			"args": [
 				{
 					"name": "watercolor",
